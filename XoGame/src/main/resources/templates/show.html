@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="template.html">
+<head>
+    <meta charset="UTF-8">
+    <title>XO GAME</title>
+    <script th:src="@{/webjars/jquery/2.2.4/jquery.min.js}"></script>
+    <script th:src="@{/javascript/history.js}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div align="center">
+        <div class="container">
+            <div class="card text-center w-75">
+                <div class="card-header" style="background-color: gold">
+                    <h1 style="font-weight: bold;">XO GAME !</h1>
+
+                </div>
+                <div class="card-body">
+                    <div class="form-group row mb-3">
+                        <label for="name-input" class="col-2 col-form-label">Name</label>
+                        <div class="col-10">
+                            <input class="form-control" style="background-color: #fff9c8" disabled type="text" maxlength="30" id="name-input" placeholder="name" th:value="${historyDTO.getName()}">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3" style="margin-top: 10px">
+                        <label for="size-input" class="col-2 col-form-label">Size</label>
+                        <div class="col-10">
+                            <input class="form-control" style="background-color: #fff9c8" disabled type="number" min="3" max="50" placeholder="3 - 50" id="size-input" th:value="${historyDTO.getSize()}">
+                        </div>
+                    </div>
+                    <div class="form-group row" style="margin-top: 10px">
+                        <label for="player-input" class="col-2 col-form-label">Player</label>
+                        <div class="col-10">
+                            <div class="col-10">
+                                <input class="form-control" style="background-color: #fff9c8" disabled type="text" id="player-input" th:value="${historyDTO.getCharacter()}">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <a class="btn" href="/history" style="background-color: gold" id="back">Back</a>
+                    <input class="btn btn-warning" id="replay" type="submit" onclick="replay()" value="Replay">
+                    <script th:inline="javascript">
+                        let playerX = [[${historyDTO.getPlayerX()}]];
+                        let playerO = [[${historyDTO.getPlayerO()}]];
+                        let turn = [[${historyDTO.getFirstTurn()}]];
+                        let winner = [[${historyDTO.getWinner()}]];
+                    </script>
+                    <br>
+                    <br>
+                    <canvas  id="board-game" width="600" height="600" style="justify-content: center; align-items: center;">
+                        Your browser does not support the HTML5 canvas tag.
+                    </canvas>
+                    <br>
+                    <br>
+                    <div class="container" id="button-action">
+                        <div class="row">
+                            <div class="col">
+                                <p id="turn"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card-footer text-muted" style="background-color: gold">
+                    Thanita Playlaharn
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
