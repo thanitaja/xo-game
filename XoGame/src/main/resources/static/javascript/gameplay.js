@@ -252,7 +252,7 @@ function isWin() {
     if (diagonal1.every((v,j) => v == turn)) {
         return true;
     }
-    console.log(diagonal2)
+
     if (diagonal2.every((v,j) => v == turn)) {
         return true;
     }
