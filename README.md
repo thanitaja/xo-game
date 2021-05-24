@@ -87,7 +87,7 @@ algorithm
       
       3.2 เช็คขนาดของ playerX.x + playerO.x ถ้าไม่เท่ากับ 0 ให้ เช็คต่อว่าเป็น turn ของใคร (รอบแรกจะใช้ค่า firstTurn) จากนั้น pop ค่า x และ y ของ player คนนั้นมาวาด 
       
-      3.3 ทำการสลับ turn วนไปเรื่อยๆจนว่า playerX.x + playerO.x เท่ากับ 0
+      3.3 ทำการสลับ turn วนไปเรื่อยๆจนว่าขนาด playerX.x + playerO.x เท่ากับ 0
     
     
   
