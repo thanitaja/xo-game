@@ -71,7 +71,8 @@ algorithim
             y: array ที่เก็บค่า y ตำแหน่งกึ่งกลางของตารางที่ผู้เล่น O เลือก
            }
     
-  3. show replay
+  3. หน้า show replay
+  
       3.1 revrese playerX.x, playerX.y, playerO.x, playerO.y
       3.2 เช็คขนาดของ playerX.x + playerO.x ถ้าไม่เท่ากับ 0 ให้ เช็คต่าว่าเป็น turn ของใคร (รอบแรกจะใช้ค่า firstTurn) จากนั้น pop ของ player คนนั้นมาวาดทำการสลับ turn วนไปเรื่อยๆจนว่า playerX.x + playerO.x เท่ากับ 0
     
