@@ -65,7 +65,7 @@ algorithim
         }
   
         
-  2. การทำ save 
+  2. param ที่ทำการ save 
  
           name: ชื่อ,
           size: ขนาด,
