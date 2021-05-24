@@ -6,10 +6,6 @@ let positionDraw = {
 
 async function drawXO() {
     if (playerX.x.length + playerO.x != 0) {
-        console.log(" PO ==== " + playerO.x +" , " +playerO.y);
-        console.log(" PX ==== " +playerX.x+" , " +playerX.y);
-        console.log(turn);
-
         if (turn == "O") {
             await delay();
             ctx.beginPath();
